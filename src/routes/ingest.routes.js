@@ -6,7 +6,7 @@ const state = require('../rag/state')
 const router = express.Router();
 const upload = multer({
   dest: process.env.AWS_LAMBDA_FUNCTION_NAME ? "/tmp" : "uploads/",
-  limits: { fileSize: 50 * 1024 * 1024 }, // 50MB
+  limits: { fileSize: 10 * 1024 * 1024 },
   fileFilter: (req, file, cb) => {
     if (file.mimetype === "application/pdf") {
       cb(null, true);
