@@ -51,5 +51,4 @@ module.exports.ingestDocuments = async (docs, customPrompt) => {
   );
 
   await setupRAGChain(customPrompt);
-  state.isInitialized = true;
 };
